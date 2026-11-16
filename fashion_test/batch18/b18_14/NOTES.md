@@ -1,0 +1,15 @@
+# b18_14 — MZ Kemeja Strip Rample (antrean No 13)
+
+- Produk: MZ - Kemeja Strip Rample fit body slimfit wanita terbaru. Shortlink https://vt.tokopedia.com/t/ZS9fsTBmHUw8G-OfZgh/. Mode: DUDUK (rotasi mode: counter "Duduk" → No 13 = Duduk; counter dimajukan ke "Berdiri Vertikal" setelah selesai).
+- Galeri: 7 foto (tok_00..tok_06). Multi-warna: navy (tok_00), hitam (tok_02), maroon (tok_04), biru muda (tok_05), pink (tok_06). tok_01 = gulungan kain (BUKAN referensi), tok_03 = size chart.
+- Referensi: tok_00.jpg (navy, depan penuh, paling jelas).
+- Desain (dihitung dari crop perbesar placket tok_00): atasan NAVY salur tipis putih vertikal, kerah kemeja pointed, TEPAT 8 kancing kecil bulat di tengah depan dari kerah sampai hem (jarak rata), lengan panjang puff kerut di bahu, fitted sampai lengan bawah, manset kerut/ruffle di pergelangan, pinggang fitted + jahitan pinggang, di bawah pinggang peplum lipit pisau mengembang, hem melebar sampai pinggul. Bawahan di foto seller: celana pendek hitam (dipakai mengikuti foto).
+- Base: base_pita_v3_tumbler.jpg (prop TUMBLER — rotasi: b18_09 kacamata → b18_14 tumbler; base ini model duduk di lantai, dinding oranye-coklat, tumbler hitam di lantai kanan bawah — frame-0 setia ke base).
+- **GERAKAN: SET C (fit/pinggang, adaptasi ciri produk).** Bahu → kerah (ujung jari) → pinggang (kedua tangan di pinggang) → cubit lipit peplum → putar badan pelan → peace 1x + wave kecil. (Set duduk terakhir = B di b18_09; C belum dipakai berurutan.)
+- Frame-0 v1: LOLOS Gate 1 ~96% sekali jalan. Navy salur, kerah pointed, TEPAT 8 kancing, puff + manset kerut, jahitan pinggang + peplum lipit, celana pendek hitam, framing mouth-cut, tumbler di tempat. File: media-generation-frame0-b18-14-duduk-v1-0-f8a26de5-38a8-4029-9b72-760de82a4c9c.webp
+- Video v1: LOLOS Gate 3 ~97%. Semua beat mendarat: kerah (2s, ujung jari) → kancing/dada (3.5s, ujung jari, dada utuh) → pinggang + cubit peplum (6.5s) → peace 1x (9.5s, level dada, jauh di bawah dagu). Background 0 vs 0.6s beku, 8 kancing + salur + peplum bertahan di semua frame, tumbler statis di semua frame, faceless aman (mulut/dagu saja). Putaran badan lemah (hampir tidak mutar — cacat ringan yang sudah dikenal, bukan gagal). File mentah: media-generation-b18-14-duduk-v1-0-d4bbd4df-3dac-49e8-8f6c-48da5f3300b7.mp4 (640x1168, 10.0s, ada audio).
+- Post-processing: crop atas 60px + upscale lanczos 720x1280, crf 18, hapus audio. Final: b18_14_duduk_v1_upscale720.mp4 (720x1280, 10.0s, silent; frame 9.5s final terverifikasi faceless).
+- Cloudinary: KemejaRample-Duduk-V1 (v1794812653) https://res.cloudinary.com/dpllb7idh/video/upload/v1794812653/KemejaRample-Duduk-V1.mp4
+- Sheet: Video Fashion No 109 "Siap tayang" (Harga kosong); Antrian Link No 13 Status "Selesai" + Kode + Link + Mode "Duduk".
+- Cacat: kalung emas (artefak base); putaran badan 6.5s lemah; lipit peplum di frame-0 lebih menonjol di satu sisi (tangan di pinggang menutupi sisi lain — diterima).
+- Media dipakai: 1 gambar + 1 video (sekali jalan). Dibuat cron produksi 16 Nov 2026 ~15:20-15:35 WITA.
