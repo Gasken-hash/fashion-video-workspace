@@ -11,7 +11,7 @@ Skill ini melengkapi (bukan menggantikan) skill `fashion_video_tutorial` — sem
 
 ## 1. Foto jangkar (base) — pakai ini, jangan bikin base baru
 
-Ada 6 foto jangkar. Unduh dari link Cloudinary di bawah (sudah terverifikasi bisa dibuka), atau pakai file lokal kalau ada di mesin.
+Ada 7 foto jangkar. Unduh dari link Cloudinary di bawah (sudah terverifikasi bisa dibuka), atau pakai file lokal kalau ada di mesin.
 
 | Mode | File lokal | Link Cloudinary |
 |---|---|---|
@@ -20,13 +20,14 @@ Ada 6 foto jangkar. Unduh dari link Cloudinary di bawah (sudah terverifikasi bis
 | Duduk — prop TUMBLER | `bases/base_pita_v3_tumbler.jpg` (1536x2752) | https://res.cloudinary.com/dpllb7idh/image/upload/v1794801677/base_pita_v3_tumbler_gz2cee.jpg |
 | Berdiri vertikal | `bases/lala_berdiri_vertikal_flow_base.jpg` (768x1365) | https://res.cloudinary.com/dpllb7idh/image/upload/v1794801678/lala_berdiri_vertikal_flow_base_ub0moa.jpg |
 | Berdiri horizontal v2 | `bases/lala_berdiri_horizontal_base_v2.jpg` (2752x1536) | https://res.cloudinary.com/dpllb7idh/image/upload/v1794801679/lala_berdiri_horizontal_base_v2_gsiuji.jpg |
-| Mirror selfie (setelan + dress) | `bases/lala_berdiri_fullbody_mirror_base.jpg` (1536x2752) | https://res.cloudinary.com/dpllb7idh/image/upload/v1794801680/lala_berdiri_fullbody_mirror_base_rmvhi2.jpg |
+| Mirror selfie (setelan + dress) — tangan di SAKU | `bases/lala_berdiri_fullbody_mirror_base.jpg` (1536x2752) | https://res.cloudinary.com/dpllb7idh/image/upload/v1794801680/lala_berdiri_fullbody_mirror_base_rmvhi2.jpg |
+| Mirror selfie (setelan + dress) — tangan SANTAI | `bases/lala_berdiri_fullbody_mirror_base_tangan_santai.jpg` (1536x2752) | https://res.cloudinary.com/dpllb7idh/image/upload/v1794878815/lala_berdiri_fullbody_mirror_base_tangan_santai_gdnwp8.jpg |
 
 Catatan base:
 - Duduk: model duduk, dinding maroon hangat, kasur di samping. Prop lantai dirotasi: tas → kacamata → tumbler → tas (lihat bagian 8).
 - Berdiri vertikal: model berdiri, medium shot, kamar krem.
 - Horizontal v2: model berdiri, kamar + CERMIN TINGGI di dinding kiri. Cermin memantulkan PINTU, model TIDAK terpantul. JANGAN pakai base horizontal v1 (tanpa cermin).
-- Mirror selfie: model full-body DI DALAM cermin lengkung tinggi, HP menutupi wajah (faceless built-in). Untuk SETELAN dan DRESS.
+- Mirror selfie: model full-body DI DALAM cermin lengkung tinggi, HP menutupi wajah (faceless built-in). Untuk SETELAN dan DRESS. Ada DUA base mirror: **tangan di saku** (pakai kalau setelan ADA saku) dan **tangan santai** (pakai kalau setelan TANPA saku — celana pendek elastis, rok, piyama, dress). Pilih base SESUAI foto seller SEBELUM generate frame-0 (lihat ATURAN SAKU di bagian 6).
 
 ---
 
@@ -49,11 +50,13 @@ Catatan base:
 
 ## 3. Alur produksi (8 langkah)
 
+**ATURAN BATCH — WAJIB, JANGAN DILANGGAR: generate frame-0 untuk SEMUA 3 produk dulu (sekaligus, dalam satu batch gambar), Gate 1 satu per satu, BARU buka Flow sekali dan generate 3 videonya berurutan. JANGAN pola 1 gambar → 1 video → 1 gambar → 1 video. Alasannya: sesi Flow gampang logout dan kredit terbatas (3 video/hari) — kalau gambar produk sudah siap semua, begitu Flow dibuka langsung gas 3 video tanpa jeda, tanpa bolak-balik.**
+
 0. **Identifikasi produk.** Sebutkan balik nama produk + linknya ke pengguna (konfirmasi match). Foto produk HARUS dari link persis yang pengguna kirim — jangan substitusi dari marketplace lain.
 1. **Ambil galeri foto seller.** Utamakan cara non-browser dulu (curl + og_info / curl-cffi untuk Tokopedia). Foto referensi = foto produk bersih PERTAMA yang benar-benar menggambarkan produk sesuai nama (bukan sekadar foto bersih pertama; untuk listing multi-desain, cocokkan motifnya; kalau tidak ada yang jelas cocok, tandai RAGU — jangan nebak). Lewati infografik/size chart.
-2. **Generate frame-0** (generator gambar AI sendiri, BUKAN Flow). Canvas = foto jangkar (base) sesuai mode. Referensi = foto seller. Ganti HANYA bajunya — sisanya jangan di-redraw. Tulis bentuk dengan kata geometri + larangan eksplisit (lihat bagian 4).
-3. **Gate 1** — bandingkan frame-0 dengan foto seller, detail per detail. Produk harus **identik minimal 95%**: warna, motif (jumlah/posisi), kerah, lengan, kancing (jumlah/ukuran/posisi), resleting, hem, fit. Kalau ragu sudah 95% atau belum, video TIDAK dibuat. Kalau frame-0 gagal, perbaiki dengan **fresh re-edit** (bukan edit bedah pada frame-0 yang gagal — sudah terbukti edit bedah bisa mengembalikan foto seller itu sendiri). Kalau 2x fresh re-edit gagal, fallback = crop faceless foto asli seller.
-4. **Generate video di Flow** (bagian 5). Frame-0 sebagai gambar awal (Frames-to-Video). Model Omni 1.1 Flash, 720p, 10 detik, x1. Prompt gerakan sesuai mode (bagian 6).
+2. **Generate frame-0 untuk SEMUA produk hari itu (3 produk = 3 frame-0, sekaligus dalam satu batch gambar)** (generator gambar AI sendiri, BUKAN Flow). Canvas = foto jangkar (base) sesuai mode. Referensi = foto seller. Ganti HANYA bajunya — sisanya jangan di-redraw. Tulis bentuk dengan kata geometri + larangan eksplisit (lihat bagian 4).
+3. **Gate 1 — untuk SETIAP frame-0** — bandingkan frame-0 dengan foto seller, detail per detail. Produk harus **identik minimal 95%**: warna, motif (jumlah/posisi), kerah, lengan, kancing (jumlah/ukuran/posisi), resleting, hem, fit. Kalau ragu sudah 95% atau belum, video TIDAK dibuat. Kalau frame-0 gagal, perbaiki dengan **fresh re-edit** (bukan edit bedah pada frame-0 yang gagal — sudah terbukti edit bedah bisa mengembalikan foto seller itu sendiri). Kalau 2x fresh re-edit gagal, fallback = crop faceless foto asli seller.
+4. **Generate video di Flow — SEKALI buka, 3 video berurutan** (bagian 5). Frame-0 sebagai gambar awal (Frames-to-Video). Model Omni 1.1 Flash, 720p, 10 detik, x1. Prompt gerakan sesuai mode (bagian 6). **JANGAN buka Flow sebelum SEMUA frame-0 batch hari itu selesai + lolos Gate 1.**
 5. **Gate 3** — cek frame video di 0 / 0,6 / 2 / 3,5 / 6,5 / 9,5 detik + background freeze (0 vs 0,6) + ketajaman vs frame-0 + bentuk dada + faceless (bagian 7). Video yang mengubah detail produk di tengah jalan = GAGAL walau frame-0 lolos.
 6. **Post-process** (bagian 8): crop atas sebagai drift guard, buang audio, verifikasi final 9,5 detik faceless.
 7. **Upload + catat OTOMATIS** (bagian 9): upload ke Cloudinary + catat ke sheet "Video Fashion" ("Siap tayang") + update "Antrian Link" jadi "Selesai". Langsung, tanpa tanya persetujuan dulu.
@@ -139,7 +142,7 @@ Ekstrak frame di 0 / 0,6 / 2 / 3,5 / 6,5 / 9,5 detik dan periksa satu per satu:
 - **Background freeze**: frame 0 vs 0,6 detik harus identik (tidak ada yang berubah/pindah). Poster dinding yang drift di mode horizontal DITERIMA (aturan khusus mode itu).
 - **Bentuk dada**: tangan TIDAK BOLEH menekan rata di dada — sentuh hanya ujung jari, lalu ke hem. Bentuk dada harus tetap sama seperti frame-0 di semua frame. (Pengecualian borderline: tangan menyebar di dada dalam SATU frame tapi bentuk dada utuh = diterima, catat cacatnya.)
 - **Resleting**: HARUS tertutup penuh kerah sampai hem di semua frame, slider di ATAS tepat di bawah kerah, kedua panel bertemu rapat, TIDAK ADA kulit/dada kelihatan. Resleting terbuka = GAGAL, video tidak dibuat.
-- **Tas**: kalau dipakai (hanya di setelan yang tasnya bagian dari produk), tas harus menggantung di bahu yang SAMA dengan talinya + kena gravitasi di semua frame. Tas tidak boleh muncul/hilang/terbang/pindah bahu.
+- **Tas**: kalau di foto referensi ADA tas, PAKAI tas yang sesuai fotonya (tas sama, bahu sama) — berlaku umum semua mode. Tas harus menggantung di bahu yang SAMA dengan talinya + kena gravitasi di semua frame. Tas tidak boleh muncul/hilang/terbang/pindah bahu. Kalau tidak bisa dirender bersih, fallback TANPA tas. Tas jinjing (tote) BELUM teruji — jangan dicoba dulu.
 - **Aksesoris**: gelang/jam/kalung harus tetap menempel di semua frame (melayang/hilang = gagal).
 - **Gerakan**: beat sesuai mode (bagian 6). Peace sign tepat 1x di akhir (kecuali horizontal: tanpa peace). Kepala tidak pernah menunduk (mode duduk + horizontal).
 - **Ketajaman**: bandingkan ketajaman frame 2 detik dengan frame-0. Flow memberi 720p native jadi biasanya tajam — kalau melembut, catat saja (tidak ada LUT/sharpening, lihat aturan keras).
@@ -182,7 +185,7 @@ Setelah Gate 3 lolos + post-process selesai:
 3. Resleting HARUS tertutup penuh di semua frame (slider di atas, panel bertemu, tanpa kulit/dada kelihatan).
 4. Wajah penuh + mata jelas = GAGAL. Video tetap faceless; wajah penuh hanya untuk foto profil.
 5. Tangan TIDAK BOLEH menekan rata di dada. Ujung jari saja.
-6. Tas TIDAK BOLEH muncul/hilang/terbang/pindah bahu. Di atasan: TIDAK PAKAI TAS (kecuali tas adalah bagian produk/set). Di setelan: pakai kalau ada di foto produk.
+6. Tas: kalau di foto referensi ADA tas, PAKAI tas yang sesuai fotonya (tas sama, bahu sama, gaya yang sama) — berlaku umum semua mode, "kalau bisa". Tas TIDAK BOLEH muncul/hilang/terbang/pindah bahu; kalau tidak bisa dirender bersih, fallback TANPA tas. Tas jinjing (tote) BELUM teruji.
 7. Hijab TIDAK dipakai. Produk hijab + mom&kids TIDAK diproduksi.
 8. Foto produk HARUS dari link persis yang pengguna kirim. Jangan substitusi dari marketplace lain.
 9. Generation yang DITOLAK (integrity check) TIDAK PERNAH di-retry, walau dirombak kata-katanya.
@@ -218,6 +221,21 @@ Pelajaran dari batch ini:
 - Kelemahan Flow: putaran badan cenderung jadi ~90 derajat (kepala ikut mutar) walau prompt minta 30 derajat. Diterima borderline kalau wajah cuma profil.
 - Flow memberi audio AAC — wajib dibuang.
 - Lunelly membuktikan resep duduk Set B bekerja sempurna di Flow (semua beat mendarat, peace di dada).
+
+## Contoh kedua — 3 setelan mirror via Flow (16 Nov 2026, 20:26)
+
+Setelan pakai mode **mirror selfie** di Flow (resep bagian 6). Ketiga frame-0 digenerate dulu sekaligus (aturan batch), baru Flow dibuka sekali dan 3 video digenerate berurutan. Semua lolos Gate 1 + Gate 3 sekali jalan, "Siap tayang".
+
+| Produk | Variasi mirror | Frame-0 | Gate 3 | Sheet |
+|---|---|---|---|---|
+| Arwen Set (outer putih motif, rok plisket putih) | tangan rileks di sisi, peace DADA | v1 ~97% | ~97%; putaran = satu sisi di 6,5s (diterima) | No 123, `ArwenSet-Mirror-Flow-V1` |
+| GLADIA One Set (denim navy, 5 kancing, celana pendek) | tangan di saku, peace PIPI | v1 ~97% | ~97% | No 124, `GladiaSet-Mirror-Flow-V1` |
+| Monica One Set Jeans (peplum denim, mutiara di lengan) | tangan sentuh hem peplum, peace DADA | v1 ~97% | ~97% | No 125, `MonicaSet-Mirror-Flow-V1` |
+
+Pelajaran dari batch ini:
+- Resep mirror (langkah maju + putar kiri/kanan + peace di dada) BEKERJA di Flow, sama seperti di generator sendiri.
+- Variasi rotasi setelan (tangan bebas + posisi peace) diterapkan di ketiganya — jangan dua setelan berurutan dengan variasi yang persis sama.
+- Catatan: di batch ini tas di foto seller TIDAK dipakai (tasnya cuma styling, bukan bagian produk). Aturan tas terbaru (16 Nov 21:30): kalau di foto referensi ADA tas, pakai tas yang sesuai fotonya — lihat aturan keras No 6.
 
 ## 14. Kegagalan yang sudah diketahui (jangan ulangi)
 

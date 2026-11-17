@@ -280,6 +280,7 @@ frame — klausul kepala tegak WAJIB ada di semua prompt video duduk.
 
 ### Langkah 5b — Alternatif: generate video di Google Flow (bukan generator sendiri)
 Selain generator sendiri, video juga bisa digenerate di **Google Flow** dari frame-0 yang sama (Frames-to-Video). Polanya IDENTIK: frame-0 digenerate dulu oleh AI sendiri (Langkah 2-4), lalu frame-0 itu dilempar ke Flow sebagai gambar awal untuk dianimasikan. Flow TIDAK bikin gambar dari nol.
+- **ATURAN BATCH — WAJIB: generate frame-0 untuk SEMUA 3 produk dulu (sekaligus, dalam satu batch gambar), Gate 1 satu per satu, BARU buka Flow sekali dan generate 3 videonya berurutan. JANGAN pola 1 gambar → 1 video → 1 gambar → 1 video.** Sesi Flow gampang logout dan kredit terbatas (3 video/hari) — kalau gambar produk sudah siap semua, begitu Flow dibuka langsung gas 3 video tanpa jeda, tanpa bolak-balik.
 - Akun Flow: login pakai akun email Google MASING-MASING (akun sendiri, BUKAN akun orang lain — jangan login pakai email orang lain, tidak akan bisa). Proyek Flow dan saldo kredit itu per akun: masing-masing buka flow.google.com dengan akun sendiri, saldo 50 kredit/hari, refresh tiap hari 20:14 WITA. Sheet pencatatan TETAP SAMA untuk semua orang (spreadsheet "Stok Video Reels Pure By Nature", tab "Video Fashion" + "Antrian Link").
 - Pengaturan: model **Omni 1.1 Flash**, **720p**, **10 detik**, output **x1** = **15 kredit/video** → 3 video/hari (45 kredit, sisa 5). **Omni 1.1 TUTUP 5 Des 2026.**
 - Aspect ratio: duduk/berdiri vertikal/mirror = 9:16; horizontal = 16:9.
