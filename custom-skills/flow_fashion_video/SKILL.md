@@ -32,8 +32,8 @@ Catatan base:
 
 ## 2. Google Flow — akun, kredit, harga
 
-- Proyek: https://flow.google.com/project/f71cbb78-402a-4f75-9e6f-2a9a3588bc0e
-- Akun: **tiktokaffiliate191198@gmail.com** ("Tik Tok Affiliate"). Login tersimpan di browser cloud — jangan login ulang, jangan pakai browser lain.
+- Proyek: buka flow.google.com dengan akun sendiri (proyek Flow itu per akun, bukan proyek bersama).
+- Akun: login pakai akun email Google MASING-MASING (akun sendiri). JANGAN login pakai akun/email orang lain — tidak akan bisa. Sheet pencatatan TETAP SAMA untuk semua orang (spreadsheet "Stok Video Reels Pure By Nature", tab "Video Fashion" + "Antrian Link").
 - Saldo: **50 kredit**, refresh tiap hari jam **20:14 WITA**.
 - Harga per 1 video (1x generate = 1 video; output x2/x3/x4 = bayar kelipatan):
   - **Omni 1.1 Flash**: 360p/8dtk = 6 | 720p/8dtk = 12 | **720p/10dtk = 15**
@@ -81,7 +81,7 @@ Aturan hitungan:
 
 ## 5. Generate video di Flow — langkah demi langkah
 
-1. Buka proyek Flow (link di bagian 2). Pastikan login sebagai Tik Tok Affiliate. JANGAN login ulang.
+1. Buka flow.google.com. Pastikan login dengan akun email Google kamu sendiri. JANGAN login pakai akun/email orang lain.
 2. Pilih mode **Frames to Video** (bukan Text to Video). Unggah frame-0 sebagai gambar awal.
 3. Atur: model **Omni 1.1 Flash** | resolusi **720p** | durasi **10 detik** | output **x1** | aspect ratio sesuai mode:
    - Duduk = **9:16 vertikal**
@@ -127,7 +127,7 @@ Resep: TETAP berdiri di tempat (TANPA melangkah maju), condongkan badan sedikit 
 - VARIASI (wajib): setelah pembuka "condong + gosok lembut", lanjutannya HARUS bervariasi tiap video (putar kiri/kanan, sentuh kerah/syal, rapikan hem, tangan di pinggang, dll) supaya tidak repetitif.
 
 ### Mirror selfie (setelan + dress)
-Resep baku: HP menutupi wajah sepanjang video, SATU langkah kecil maju ke cermin, putar badan atas sedikit ke KIRI lalu ke KANAN, kembali depan, tahan pose; tangan satunya di saku (atau rileks di sisi badan kalau setelan tanpa saku). **DIAKHIRI peace sign 1x di level dada** (tangan bebas, jauh di bawah dagu, jauh dari HP/wajah, tahan sampai habis). Framing yang berubah setelah langkah maju DITERIMA sebagai natural. Putaran kiri+kanan sering menyatu jadi satu sisi — itu perilaku yang diketahui, diterima.
+Resep baku: HP menutupi wajah sepanjang video, SATU langkah kecil maju ke cermin, putar badan atas sedikit ke KIRI lalu ke KANAN, kembali depan, tahan pose; tangan satunya di saku (atau rileks di sisi badan kalau setelan tanpa saku). **DIAKHIRI peace sign 1x di level dada** (tangan bebas, jauh di bawah dagu, jauh dari HP/wajah, tahan sampai habis). Framing yang berubah setelah langkah maju DITERIMA sebagai natural. Putaran kiri+kanan sering menyatu jadi satu sisi — itu perilaku yang diketahui, diterima. **ATURAN SAKU (Jendral, 17 Nov 2026): kalimat saku HANYA dipakai kalau foto seller JELAS ada saku; kalau tidak ada saku, ganti jadi "Her other hand rests relaxed at her side, never pressed against her hip or thigh." Tangan "masuk saku" tanpa saku bisa dirender menempel ke pinggul-paha = sugestif, bahaya buat TikTok. Gate 3 wajib cek posisi tangan bebas di semua frame. AKAR MASALAH: foto jangkar mirror lama tangannya masuk saku jeans — jadi ada DUA base mirror: `lala_berdiri_fullbody_mirror_base.jpg` (tangan di saku, untuk setelan ADA saku) dan `lala_berdiri_fullbody_mirror_base_tangan_santai.jpg` (tangan rileks di sisi, untuk setelan TANPA saku; Cloudinary: https://res.cloudinary.com/dpllb7idh/image/upload/v1794878815/lala_berdiri_fullbody_mirror_base_tangan_santai_gdnwp8.jpg). Pilih base SESUAI foto seller sebelum generate frame-0.**
 - Template prompt: "A realistic mirror selfie video. A woman stands in front of a tall arched mirror, holding her phone up so it covers her entire face the whole video. She takes one small step forward toward the mirror, pauses, turns her upper body slightly to the left, then rotates slightly to the right, then returns to face the mirror and holds the pose. Her other hand stays in her jeans pocket the whole time (or relaxed at her side if the outfit has no pockets). At the very end, she raises her free hand and makes ONE peace sign at chest level, well below her chin, far from the phone and her face, and holds it until the video ends. **The phone covers her entire face throughout, her face is never shown. The camera is completely static, no zoom, no cuts, no voice.**"
 - Rotasi setelan: variasinya di DALAM mode mirror — arah putar (kiri/kanan, satu sisi per video), tangan bebas (di saku / rileks / sentuh kancing-hem), posisi peace (dada/pipi, dirotasi). Jangan dua setelan berurutan dengan variasi yang persis sama.
 

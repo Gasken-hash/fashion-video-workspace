@@ -280,7 +280,7 @@ frame — klausul kepala tegak WAJIB ada di semua prompt video duduk.
 
 ### Langkah 5b — Alternatif: generate video di Google Flow (bukan generator sendiri)
 Selain generator sendiri, video juga bisa digenerate di **Google Flow** dari frame-0 yang sama (Frames-to-Video). Polanya IDENTIK: frame-0 digenerate dulu oleh AI sendiri (Langkah 2-4), lalu frame-0 itu dilempar ke Flow sebagai gambar awal untuk dianimasikan. Flow TIDAK bikin gambar dari nol.
-- Proyek: https://flow.google.com/project/f71cbb78-402a-4f75-9e6f-2a9a3588bc0e | Akun: tiktokaffiliate191198@gmail.com | Saldo 50 kredit, refresh tiap hari 20:14 WITA.
+- Akun Flow: login pakai akun email Google MASING-MASING (akun sendiri, BUKAN akun orang lain — jangan login pakai email orang lain, tidak akan bisa). Proyek Flow dan saldo kredit itu per akun: masing-masing buka flow.google.com dengan akun sendiri, saldo 50 kredit/hari, refresh tiap hari 20:14 WITA. Sheet pencatatan TETAP SAMA untuk semua orang (spreadsheet "Stok Video Reels Pure By Nature", tab "Video Fashion" + "Antrian Link").
 - Pengaturan: model **Omni 1.1 Flash**, **720p**, **10 detik**, output **x1** = **15 kredit/video** → 3 video/hari (45 kredit, sisa 5). **Omni 1.1 TUTUP 5 Des 2026.**
 - Aspect ratio: duduk/berdiri vertikal/mirror = 9:16; horizontal = 16:9.
 - Flow memberi video 720p native **dengan audio AAC** — audionya WAJIB dibuang di post-process (Langkah 7).
@@ -306,8 +306,7 @@ Cek tiap frame:
   HP harus menutupi wajah di SEMUA frame.
 - Resleting (kalau ada) tertutup penuh di SEMUA frame.
 - Bentuk dada vs frame-0 (tidak melorot/rata).
-- Tas (kalau dipakai) di bahu yang sama, tali nyambung, menggantung
-  kena gravitasi di semua frame.
+- Tas (ATURAN BARU Jendral 16 Nov 2026 ~21:30 WITA): kalau di foto referensi seller ADA TAS, PAKAI tas yang sesuai fotonya (tas sama, bahu sama) — berlaku umum semua mode, bukan cuma tas bagian produk. Tas harus lolos Gate 1 + Gate 3: di bahu yang sama, tali nyambung, menggantung kena gravitasi di semua frame; kalau tidak bisa dirender bersih, fallback TANPA tas. Terbukti: tas bahu GLADIA rantai (Gate 1 ~97% + Gate 3 ~96%, 16 Nov 21:06 WITA; sempat ketutup badan ~1 dtk pas putar maksimal lalu balik di bahu yang sama = oklusi, diterima). Tas jinjing (tote) BELUM teruji — jangan dicoba dulu. Mode duduk paling rawan buat tas.
 - Aksesoris tetap menempel di semua frame.
 - Ketajaman frame 2 detik vs frame-0 (video boleh lebih lembut, tapi
   detail produk harus tetap terbaca).
@@ -457,6 +456,8 @@ camera, no zoom, no cuts. Preserve the bedroom and mirror reflection.
 Consistent lighting and background. Photorealistic smartphone aesthetic.
 Avoid exaggerated movements, dancing, unnatural twisting, walking away,
 or revealing the face."
+- **ATURAN SAKU (Jendral, 17 Nov 2026 ~09:25 WITA) — BAHAYA kalau celana/rok tidak ada saku:** kalimat "Her other hand stays inside her jeans pocket" HANYA dipakai kalau foto seller JELAS menunjukkan ada saku (kelihatan lubang/kantong saku). Kalau setelan TIDAK ada saku (celana pendek elastis, rok, piyama, dress) — GANTI kalimatnya jadi "Her other hand rests relaxed at her side, never pressed against her hip or thigh." JANGAN biarkan kalimat saku masuk ke prompt. Alasan: generator bisa render tangan "masuk saku" padahal tidak ada saku = tangan menempel/masuk ke pinggul-paha, kelihatan sugestif, risiko pelanggaran TikTok. Gate 3 wajib cek posisi tangan bebas di semua frame.
+- **DUA BASE MIRROR (Jendral, 17 Nov 2026 ~09:26 WITA — akar masalahnya foto jangkar):** base mirror lama tangannya masuk saku jeans, jadi pose saku itu kebawa ke semua frame-0 walau prompt diganti. Sekarang ada DUA base: (1) `lala_berdiri_fullbody_mirror_base.jpg` — tangan di saku, PAKAI INI kalau setelan JELAS ada saku; (2) `lala_berdiri_fullbody_mirror_base_tangan_santai.jpg` — tangan rileks di sisi badan, PAKAI INI kalau setelan TIDAK ada saku (celana pendek elastis, rok, piyama, dress). Link Cloudinary base tangan santai: https://res.cloudinary.com/dpllb7idh/image/upload/v1794878815/lala_berdiri_fullbody_mirror_base_tangan_santai_gdnwp8.jpg — Pilih base SESUAI foto seller, sebelum generate frame-0.
 - Peace sign 1x di AKHIR (revisi Jendral 16 Nov 2026 ~14:25 WITA): setelah kembali depan, tangan bebas (bukan tangan HP) angkat peace ✌️ di level dada, jauh di bawah dagu, jauh dari HP/wajah, tahan sampai video habis. HP TETAP menutupi wajah sepanjang video. TANPA maju-mundur lama. Satu tangan pegang HP (menutupi wajah SEPANJANG video), tangan lain di saku (kalau setelan pakai rok/celana tanpa saku: tangan lain rileks di sisi badan).
 - **Rotasi setelan (Jendral 16 Nov 2026 ~15:41 WITA, "yap bener"):** setelan JUGA dirotasi — variasinya di dalam mode mirror: arah putar (kiri/kanan, satu sisi per video), tangan bebas (di saku / rileks di sisi badan / sentuh kancing-hem), posisi peace (dada/pipi, dirotasi). Jangan dua setelan berurutan pakai variasi yang sama persis.
 - **Dress = mirror juga (Jendral 16 Nov 2026 ~15:46 WITA):** dress full-length kayak setelan, butuh full-body biar kelihatan utuh — kalau pakai mode atasan (medium shot), roknya kepotong. Jadi dress masuk MIRROR SELFIE, ikut rotasi variasi mirror.
