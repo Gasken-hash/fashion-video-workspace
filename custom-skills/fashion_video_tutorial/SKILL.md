@@ -362,11 +362,14 @@ curl -X POST "https://api.cloudinary.com/v1_1/<cloud>/video/upload" \
 ```
   `public_id` = Kode Video (contoh: `CardiganPita-Duduk-V1`). Ambil
   `secure_url` dari respons JSON.
-- Catat ke sheet tab "Video Fashion" (kolom A–H: No | Kode Video |
-  Produk | Harga | Link Shopee | Durasi | Link Cloudinary | Status):
-  Harga KOSONG untuk produk batch (bukan barang sendiri, fokus
-  pemasaran saja — keputusan Jendral). Status = "Siap tayang".
-  Setelah tulis, BACA ULANG barisnya untuk verifikasi.
+- Catat ke sheet tab "Video Fashion" (kolom A–J: No | Kode Video |
+  Produk | Harga | Link Shopee | Durasi | Link Cloudinary | Status |
+  AI | Mode): Harga KOSONG untuk produk batch (bukan barang sendiri,
+  fokus pemasaran saja — keputusan Jendral). Status = "Siap tayang",
+  AI = namamu, Mode = mode yang dipakai. BACA sheet fresh tepat
+  sebelum menulis untuk dapat baris kosong yang benar (jangan pakai
+  hitungan dari bacaan awal kerja). Setelah tulis, BACA ULANG barisnya
+  untuk verifikasi.
 - Tulis NOTES.md di folder produk (desain produk, referensi yang
   dipakai, set gerakan, hasil Gate 1/3, cacat, Cloudinary + No sheet).
 - Serahkan ke Jendral (aturan 15 Nov 2026 20:45 WITA):
@@ -629,9 +632,18 @@ cari link; produksi + penjadwalan jalan sendiri.
 
 - **Spreadsheet "Stok Video Reels Pure By Nature"**, tab **"Antrian Link"**:
   kolom A No | B Link Produk | C Nama Produk | D Mode | E Status |
-  F Kode Video | G Link Video | H Catatan | I Dijadwalkan.
+  F Kode Video | G Link Video | H Catatan | I Dijadwalkan | J AI.
   Data mulai baris 3 (baris 2 petunjuk). Jendral tempel link di kolom B
   + Status "Pending", atau kirim link ke chat dan AI yang mencatat.
+- **ATURAN KLAIM (Jendral, 17 Nov 2026 — dua AI kerja di sheet yang sama):**
+  SEBELUM mulai mengerjakan satu baris, tulis NAMAMU di kolom J (AI)
+  baris itu — itu tanda baris itu sudah jadi tugasmu. Baris yang kolom
+  J-nya sudah ada nama AI lain = sedang dikerjakan AI lain, LEWATI,
+  jangan disentuh. Ambil hanya baris Status "Pending" DAN kolom J
+  masih kosong. Saat mencatat ke "Video Fashion", baca sheet fresh
+  tepat sebelum menulis (jangan pakai hitungan baris kosong dari
+  bacaan awal kerja — itu yang menimpa baris Lorel/Salsa 17 Nov),
+  tulis dengan update eksplisit, lalu read-back.
 - **Urutan antrean:** atasan dulu (Duduk) → setelan (Full-body/mirror)
   → ribet (Duduk ribet) → Skip (hijab, tidak dibuat).
 - **Cron produksi** (`produksi-harian-antrian-link`): jalan tiap 4 jam,
