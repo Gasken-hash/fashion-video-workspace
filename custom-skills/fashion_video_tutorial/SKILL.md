@@ -30,35 +30,46 @@ HANYA bajunya. Foto-foto ini ada di mesin Igris DAN sudah di-upload ke
 Cloudinary (16 Nov 2026) — AI lain bisa unduh langsung dari link di
 bawah ini, tidak perlu minta file ke Jendral.
 
+**VERSI YANG BERLAKU SEKARANG (17 Nov 2026): file `*_cahaya.jpg`.**
+Komposisi/pose/prop SAMA PERSIS dengan base lama, ditambah sinar
+matahari sore hangat dari jendela kiri + bayangan lembut, dan dinding
+semua base DISAMAKAN ke **cream hangat** seperti dinding base
+horizontal (keputusan Jendral 17 Nov 2026 ~12:00 WITA, "warnanya gini
+semua samakan"). Pakai file `*_cahaya.jpg` + link Cloudinary di bawah.
+Base lama (tanpa cahaya, dinding tan) masih tersimpan lokal sebagai
+arsip — jangan dipakai lagi.
+
 ### 1a. Mode DUDUK (mode utama, atasan) — 3 base, prop lantai dirotasi
-Semua 1536x2752 (vertikal 9:16), dinding maroon hangat, model duduk
-di tepi kasur, framing potong di mulut (mata tidak kelihatan),
-kamar krem + kasur + boneka plush. Bedanya cuma PROP DI LANTAI
+Semua 1168x2112 (versi cahaya, vertikal 9:16), dinding CREAM hangat,
+model duduk di tepi kasur, framing potong di mulut (mata tidak
+kelihatan), kamar krem + kasur + boneka plush, sinar matahari sore
+hangat dari jendela kiri. Bedanya cuma PROP DI LANTAI
 (kanan bawah), dirotasi tiap video supaya tidak monoton:
-- `~/workspace/fashion_test/bases/base_pita_v3_tas.jpg` — tas hitam di lantai
-- `~/workspace/fashion_test/bases/base_pita_v3_kacamata.jpg` — kacamata di lantai
-- `~/workspace/fashion_test/bases/base_pita_v3_tumbler.jpg` — tumbler hitam di lantai
+- `~/workspace/fashion_test/bases/base_pita_v3_tas_cahaya.jpg` — tas hitam di lantai
+- `~/workspace/fashion_test/bases/base_pita_v3_kacamata_cahaya.jpg` — kacamata di lantai
+- `~/workspace/fashion_test/bases/base_pita_v3_tumbler_cahaya.jpg` — tumbler hitam di lantai
 
 Rotasi prop: tas → kacamata → tumbler → tas → ... (satu prop per
 video). Prop STATIS di lantai — bukan dipakai/dibawa. Aturan tas-fisika
 tetap berlaku (lihat bagian 6).
 
-Link Cloudinary (unduh langsung):
-- Tas: https://res.cloudinary.com/dpllb7idh/image/upload/v1794801668/base_pita_v3_tas_fqfkur.jpg
-- Kacamata: https://res.cloudinary.com/dpllb7idh/image/upload/v1794801675/base_pita_v3_kacamata_ihvlki.jpg
-- Tumbler: https://res.cloudinary.com/dpllb7idh/image/upload/v1794801677/base_pita_v3_tumbler_gz2cee.jpg
+Link Cloudinary (unduh langsung, versi cahaya):
+- Tas: https://res.cloudinary.com/dpllb7idh/image/upload/v1794890098/base_pita_v3_tas_cahaya.jpg
+- Kacamata: https://res.cloudinary.com/dpllb7idh/image/upload/v1794890101/base_pita_v3_kacamata_cahaya.jpg
+- Tumbler: https://res.cloudinary.com/dpllb7idh/image/upload/v1794890102/base_pita_v3_tumbler_cahaya.jpg
 
 ### 1b. Mode BERDIRI VERTIKAL (atasan, variasi hari lain)
-- `~/workspace/fashion_test/bases/lala_berdiri_vertikal_flow_base.jpg`
-  (768x1365, vertikal 9:16). Model BERDIRI, medium shot mulut–paha
+- `~/workspace/fashion_test/bases/lala_berdiri_vertikal_flow_base_cahaya.jpg`
+  (1184x2096, vertikal 9:16). Model BERDIRI, medium shot mulut–paha
   tengah, cardigan pink pita + celana putih, gelang emas kanan,
-  kalung emas, cepol RENDAH, kamar krem + kasur + boneka plush.
+  kalung emas, cepol RENDAH, kamar krem + kasur + boneka plush,
+  sinar matahari sore hangat dari jendela kiri.
   Gerakan: Set Berdiri F (lihat bagian 5).
-  Link Cloudinary: https://res.cloudinary.com/dpllb7idh/image/upload/v1794801678/lala_berdiri_vertikal_flow_base_ub0moa.jpg
+  Link Cloudinary: https://res.cloudinary.com/dpllb7idh/image/upload/v1794890103/lala_berdiri_vertikal_flow_base_cahaya.jpg
 
 ### 1c. Mode BERDIRI HORIZONTAL (atasan, variasi hari lain)
-- `~/workspace/fashion_test/bases/lala_berdiri_horizontal_base_v2.jpg`
-  (2752x1536, horizontal 16:9). **PAKAI v2 (yang terbaru).** v2 = base
+- `~/workspace/fashion_test/bases/lala_berdiri_horizontal_base_v2_cahaya.jpg`
+  (2112x1168, horizontal 16:9). **PAKAI v2 (yang terbaru).** v2 = base
   lama + CERMIN TINGGI (arched mirror) di dinding kiri, memantulkan
   PINTU — biar vibesnya tetap 1 kamar (revisi Jendral 16 Nov 2026).
   Model TIDAK terpantul di cermin (cermin memantulkan pintu saja).
@@ -67,12 +78,12 @@ Link Cloudinary (unduh langsung):
 - v1 (tanpa cermin) disimpan sebagai
   `~/workspace/fashion_test/bases/lala_berdiri_horizontal_base_v1.jpg`
   — JANGAN dipakai lagi, pakai v2.
-  Link Cloudinary (v2): https://res.cloudinary.com/dpllb7idh/image/upload/v1794801679/lala_berdiri_horizontal_base_v2_gsiuji.jpg
+  Link Cloudinary (v2, versi cahaya): https://res.cloudinary.com/dpllb7idh/image/upload/v1794890104/lala_berdiri_horizontal_base_v2_cahaya.jpg
 - Gerakan: resep "review outfit" (lihat bagian 5).
 
 ### 1d. Mode MIRROR SELFIE (SETELAN — atasan + bawahan panjang)
-- `~/workspace/fashion_test/bases/lala_berdiri_fullbody_mirror_base.jpg`
-  (1536x2752, vertikal 9:16). Model full-body DI DALAM cermin tinggi
+- `~/workspace/fashion_test/bases/lala_berdiri_fullbody_mirror_base_cahaya.jpg`
+  (1168x2112, vertikal 9:16). Model full-body DI DALAM cermin tinggi
   (arched mirror), pegang HP menutupi wajah (faceless built-in),
   cepol messy, kamar yang sama (kasur gingham + plush + poster pink).
   **Ini base setelan yang berlaku sekarang (revisi Jendral 16 Nov 2026).**
@@ -80,7 +91,7 @@ Link Cloudinary (unduh langsung):
   mulut–kaki, kaki telanjang) SUDAH DIGANTI — jangan dipakai untuk
   setelan baru. Video FLORA lama yang sudah dicatat tetap sah.
 - Gerakan: PROMPT JENDRAL verbatim (lihat bagian 5) + peace sign 1x di akhir (revisi Jendral 16 Nov 2026 ~14:25 WITA: "peace sign nya jangan lupa ya" — mirror WAJIB diakhiri peace, tangan bebas, level dada, HP tetap menutupi wajah).
-  Link Cloudinary: https://res.cloudinary.com/dpllb7idh/image/upload/v1794801680/lala_berdiri_fullbody_mirror_base_rmvhi2.jpg
+  Link Cloudinary: https://res.cloudinary.com/dpllb7idh/image/upload/v1794890105/lala_berdiri_fullbody_mirror_base_cahaya.jpg
 
 ### 1e. Yang TIDAK dipakai lagi (jangan pakai)
 - Base Adelia landscape (bedah_maroon_1111, 2096x1184) — base lama
@@ -374,10 +385,10 @@ curl -X POST "https://api.cloudinary.com/v1_1/<cloud>/video/upload" \
 
 | Mode | Kapan dipakai | Format | Base | Gerakan |
 |---|---|---|---|---|
-| 1. Duduk (UTAMA) | Atasan tunggal | Vertikal 9:16, medium shot (mulut–paha tengah), model duduk di tepi kasur sepanjang video | base_pita_v3_*.jpg (prop dirotasi) | Set A–E (lihat bagian 5) |
-| 2. Berdiri vertikal | Atasan, variasi hari lain | Vertikal 9:16, medium shot (mulut–paha tengah) | lala_berdiri_vertikal_flow_base.jpg | Set Berdiri F |
-| 3. Berdiri horizontal | Atasan, variasi hari lain | Horizontal 16:9, kamar | lala_berdiri_horizontal_base_v2.jpg | Resep "review outfit" |
-| 4. Mirror selfie | SETELAN (atasan + bawahan panjang) | Vertikal 9:16, full-body di dalam cermin | lala_berdiri_fullbody_mirror_base.jpg | Prompt Jendral verbatim |
+| 1. Duduk (UTAMA) | Atasan tunggal | Vertikal 9:16, medium shot (mulut–paha tengah), model duduk di tepi kasur sepanjang video | base_pita_v3_*_cahaya.jpg (prop dirotasi) | Set A–E (lihat bagian 5) |
+| 2. Berdiri vertikal | Atasan, variasi hari lain | Vertikal 9:16, medium shot (mulut–paha tengah) | lala_berdiri_vertikal_flow_base_cahaya.jpg | Set Berdiri F |
+| 3. Berdiri horizontal | Atasan, variasi hari lain | Horizontal 16:9, kamar | lala_berdiri_horizontal_base_v2_cahaya.jpg | Resep "review outfit" |
+| 4. Mirror selfie | SETELAN (atasan + bawahan panjang) | Vertikal 9:16, full-body di dalam cermin | lala_berdiri_fullbody_mirror_base_cahaya.jpg | Prompt Jendral verbatim |
 
 Satu produk bisa dapat 1 video per mode, tayang di HARI BERBEDA.
 **ROTASI MODE (aturan Jendral 16 Nov 2026):** produksi merotasi mode
@@ -385,6 +396,10 @@ ANTAR PRODUK — 1 duduk, 1 berdiri vertikal, 1 horizontal, diulang.
 JANGAN semua gaya di 1 produk. Setelan tetap mirror (tidak ikut
 rotasi). Mode yang sudah dipakai tiap produk dicatat di kolom Mode
 (Antrian Link) supaya kelihatan mana yang sudah pernah.
+**MODE DUDUK DI-PAUSE SEMENTARA (Jendral, 17 Nov 2026 ~11:29 WITA):**
+video duduk berubah banyak, prioritaskan mode lain dulu — atasan
+rotasi HANYA Berdiri Vertikal ↔ Horizontal sampai Jendral bilang
+lanjut.
 
 ### Mode 2 — Berdiri vertikal (Set Berdiri F)
 Urutan: tangan kanan di pinggang → kedua tangan ke kerah/pita →
@@ -458,7 +473,7 @@ Consistent lighting and background. Photorealistic smartphone aesthetic.
 Avoid exaggerated movements, dancing, unnatural twisting, walking away,
 or revealing the face."
 - **ATURAN SAKU (Jendral, 17 Nov 2026 ~09:25 WITA) — BAHAYA kalau celana/rok tidak ada saku:** kalimat "Her other hand stays inside her jeans pocket" HANYA dipakai kalau foto seller JELAS menunjukkan ada saku (kelihatan lubang/kantong saku). Kalau setelan TIDAK ada saku (celana pendek elastis, rok, piyama, dress) — GANTI kalimatnya jadi "Her other hand rests relaxed at her side, never pressed against her hip or thigh." JANGAN biarkan kalimat saku masuk ke prompt. Alasan: generator bisa render tangan "masuk saku" padahal tidak ada saku = tangan menempel/masuk ke pinggul-paha, kelihatan sugestif, risiko pelanggaran TikTok. Gate 3 wajib cek posisi tangan bebas di semua frame.
-- **DUA BASE MIRROR (Jendral, 17 Nov 2026 ~09:26 WITA — akar masalahnya foto jangkar):** base mirror lama tangannya masuk saku jeans, jadi pose saku itu kebawa ke semua frame-0 walau prompt diganti. Sekarang ada DUA base: (1) `lala_berdiri_fullbody_mirror_base.jpg` — tangan di saku, PAKAI INI kalau setelan JELAS ada saku; (2) `lala_berdiri_fullbody_mirror_base_tangan_santai.jpg` — tangan rileks di sisi badan, PAKAI INI kalau setelan TIDAK ada saku (celana pendek elastis, rok, piyama, dress). Link Cloudinary base tangan santai: https://res.cloudinary.com/dpllb7idh/image/upload/v1794878815/lala_berdiri_fullbody_mirror_base_tangan_santai_gdnwp8.jpg — Pilih base SESUAI foto seller, sebelum generate frame-0.
+- **DUA BASE MIRROR (Jendral, 17 Nov 2026 ~09:26 WITA — akar masalahnya foto jangkar):** base mirror lama tangannya masuk saku jeans, jadi pose saku itu kebawa ke semua frame-0 walau prompt diganti. Sekarang ada DUA base: (1) `lala_berdiri_fullbody_mirror_base_cahaya.jpg` — tangan di saku, PAKAI INI kalau setelan JELAS ada saku; (2) `lala_berdiri_fullbody_mirror_base_tangan_santai_cahaya.jpg` — tangan rileks di sisi badan, PAKAI INI kalau setelan TIDAK ada saku (celana pendek elastis, rok, piyama, dress). Link Cloudinary base tangan santai: https://res.cloudinary.com/dpllb7idh/image/upload/v1794890106/lala_berdiri_fullbody_mirror_base_tangan_santai_cahaya.jpg — Pilih base SESUAI foto seller, sebelum generate frame-0.
 - Peace sign 1x di AKHIR (revisi Jendral 16 Nov 2026 ~14:25 WITA): setelah kembali depan, tangan bebas (bukan tangan HP) angkat peace ✌️ di level dada, jauh di bawah dagu, jauh dari HP/wajah, tahan sampai video habis. HP TETAP menutupi wajah sepanjang video. TANPA maju-mundur lama. Satu tangan pegang HP (menutupi wajah SEPANJANG video), tangan lain di saku (kalau setelan pakai rok/celana tanpa saku: tangan lain rileks di sisi badan).
 - **Rotasi setelan (Jendral 16 Nov 2026 ~15:41 WITA, "yap bener"):** setelan JUGA dirotasi — variasinya di dalam mode mirror: arah putar (kiri/kanan, satu sisi per video), tangan bebas (di saku / rileks di sisi badan / sentuh kancing-hem), posisi peace (dada/pipi, dirotasi). Jangan dua setelan berurutan pakai variasi yang sama persis.
 - **Dress = mirror juga (Jendral 16 Nov 2026 ~15:46 WITA):** dress full-length kayak setelan, butuh full-body biar kelihatan utuh — kalau pakai mode atasan (medium shot), roknya kepotong. Jadi dress masuk MIRROR SELFIE, ikut rotasi variasi mirror.
