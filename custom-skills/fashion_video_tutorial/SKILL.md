@@ -290,7 +290,8 @@ Catatan: beat "cubit hem" bisa bikin kepala menunduk dan wajah masuk
 frame — klausul kepala tegak WAJIB ada di semua prompt video duduk.
 
 ### Langkah 5b — Alternatif: generate video di Google Flow (bukan generator sendiri)
-Selain generator sendiri, video juga bisa digenerate di **Google Flow** dari frame-0 yang sama (Frames-to-Video). Polanya IDENTIK: frame-0 digenerate dulu oleh AI sendiri (Langkah 2-4), lalu frame-0 itu dilempar ke Flow sebagai gambar awal untuk dianimasikan. Flow TIDAK bikin gambar dari nol.
+Selain generator sendiri, video juga bisa digenerate di **Google Flow** dari frame-0 yang sama (Frames-to-Video). Polanya IDENTIK: frame-0 digenerate dulu (Langkah 2-4), lalu frame-0 itu dilempar ke Flow sebagai gambar awal untuk dianimasikan. Flow TIDAK bikin VIDEO dari nol.
+- **FRAME-0 GRATIS DI FLOW (hemat kuota Muse — terbukti 18 Nov 2026, b18_69): frame-0 TIDAK HARUS dari generator sendiri — bisa dibuat di dalam Flow (mode Image, Nano Banana 2.1, 0 kredit, 0 kuota Muse).** Caranya: lampirkan foto seller PERTAMA + foto jangkar/base KEDUA sebagai ingredients, lalu prompt kalimat eksplisit (bukan 2 kata "transfer outfit" saja — itu GAGAL, model malah menukar background). Template prompt lengkap + bukti tes ada di skill Flow bagian 4b. "/transferoutfit" BUKAN slash command (ketik "/" tidak memunculkan apa-apa). Gate 1 tetap wajib untuk frame-0 Flow.
 - **ATURAN BATCH — WAJIB: generate frame-0 untuk SEMUA 3 produk dulu (sekaligus, dalam satu batch gambar), Gate 1 satu per satu, BARU buka Flow sekali dan generate 3 videonya berurutan. JANGAN pola 1 gambar → 1 video → 1 gambar → 1 video.** Sesi Flow gampang logout dan kredit terbatas (3 video/hari) — kalau gambar produk sudah siap semua, begitu Flow dibuka langsung gas 3 video tanpa jeda, tanpa bolak-balik.
 - Akun Flow: login pakai akun email Google MASING-MASING (akun sendiri, BUKAN akun orang lain — jangan login pakai email orang lain, tidak akan bisa). Proyek Flow dan saldo kredit itu per akun: masing-masing buka flow.google.com dengan akun sendiri, saldo 50 kredit/hari, refresh tiap hari 20:14 WITA. Sheet pencatatan TETAP SAMA untuk semua orang (spreadsheet "Stok Video Reels Pure By Nature", tab "Video Fashion" + "Antrian Link").
 - Pengaturan: model **Omni 1.1 Flash**, **720p**, **10 detik**, output **x1** = **15 kredit/video** → 3 video/hari (45 kredit, sisa 5). **Omni 1.1 TUTUP 5 Des 2026.**
@@ -299,7 +300,7 @@ Selain generator sendiri, video juga bisa digenerate di **Google Flow** dari fra
 - Peringatan "Poin tidak cukup" saat submit BUKAN kegagalan kalau generasi sudah jalan — videonya tetap jadi dan bisa diunduh.
 - Temuan penting (16 Nov 2026): Flow menganimasikan frame-0 sangat setia (produk/background/framing hampir tidak berubah), TAPI putaran badan cenderung jadi ~90 derajat profil (kepala ikut mutar) walau prompt minta 30 derajat — diterima borderline kalau wajah cuma profil (bukan full face, mata tidak jelas).
 - **Detail lengkap ada di skill terpisah: `~/workspace/custom-skills/flow_fashion_video/SKILL.md`** (foto jangkar + link Cloudinary, prompt gerakan per mode untuk Flow, harga, contoh nyata 3 video Flow pertama 16 Nov 2026). Baca skill itu sebelum generate video di Flow.
-- JANGAN dorong spend kredit Flow kalau pengguna tidak minta. Generator sendiri = utama, Flow = backup produk andalan.
+- Rejim produksi (Jendral, 18 Nov 2026, opsi B, mulai 19 Nov 2026): total 13 video/hari = 10 generator sendiri + 3 Flow/hari. Flow adalah produksi RUTIN (bukan cuma backup), dan frame-0 sebisa mungkin dibuat GRATIS di Flow (lihat poin pertama di atas) supaya hemat kuota Muse. Jangan beli kredit Flow.
 
 ### Langkah 6 — GATE 3: QC frame video lawan foto asli
 Ekstrak frame dari video mentah di detik 0 / 0.6 / 2 / 3.5 / 6.5 /

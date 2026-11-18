@@ -1,8 +1,9 @@
 # Skill: Video Fashion di Google Flow (Frames-to-Video)
 
 Buat video fashion TikTok (karakter Lala, @lala.coquette) dengan Google Flow.
-Pola kerja: **frame-0 digenerate dulu oleh AI sendiri (generator gambar), lalu frame-0 itu dilempar ke Flow sebagai gambar awal (Frames-to-Video) untuk dianimasikan jadi video 10 detik.**
-Flow TIDAK bikin gambar dari nol — dia nerusin gerakan dari frame-0 yang sudah benar.
+Pola kerja: **frame-0 digenerate dulu, lalu frame-0 itu dilempar ke Flow sebagai gambar awal (Frames-to-Video) untuk dianimasikan jadi video 10 detik.**
+Flow TIDAK bikin VIDEO dari nol — dia nerusin gerakan dari frame-0 yang sudah benar.
+**Frame-0 sendiri bisa dibuat DUA cara (bagian 4 + 4b): (a) generator gambar AI sendiri, atau (b) GRATIS di dalam Flow (mode Image, Nano Banana 2.1, 0 kredit) dengan prompt transfer eksplisit — cara (b) TIDAK makan kuota Muse sama sekali dan TIDAK makan kredit Flow, jadi ini cara paling hemat kuota (terbukti 18 Nov 2026, b18_69).**
 Alasan: frame-0 adalah KONTROL yang mengunci produk agar identik dengan foto seller (minimal 95%). Tanpa frame-0, generator video membuat keputusannya sendiri dan produk bisa meleset (sudah terbukti gagal di tes tanpa frame-0, b17_50).
 
 Skill ini melengkapi (bukan menggantikan) skill `fashion_video_tutorial` — semua aturan produk, Gate 1, Gate 3, dan rotasi di sana TETAP berlaku. Yang baru di sini hanya: cara memakai Flow sebagai generator video.
@@ -36,6 +37,7 @@ Catatan base:
 - Proyek: buka flow.google.com dengan akun sendiri (proyek Flow itu per akun, bukan proyek bersama).
 - Akun: login pakai akun email Google MASING-MASING (akun sendiri). JANGAN login pakai akun/email orang lain — tidak akan bisa. Sheet pencatatan TETAP SAMA untuk semua orang (spreadsheet "Stok Video Reels Pure By Nature", tab "Video Fashion" + "Antrian Link").
 - Saldo: **50 kredit**, refresh tiap hari jam **20:14 WITA**.
+- **GAMBAR DI FLOW GRATIS (0 kredit)** — mode Image di prompt bar (model Nano Banana 2.1, output x1): panel settings menunjukkan "0 kredit" per gambar. Yang bayar cuma VIDEO. Jadi frame-0 yang dibuat di Flow = 0 kuota Muse + 0 kredit Flow (lihat bagian 4b).
 - Harga per 1 video (1x generate = 1 video; output x2/x3/x4 = bayar kelipatan):
   - **Omni 1.1 Flash**: 360p/8dtk = 6 | 720p/8dtk = 12 | **720p/10dtk = 15**
   - Omni 1.2 Flash: 360p/8dtk = 8 | 720p/8dtk = 24
@@ -54,7 +56,7 @@ Catatan base:
 
 0. **Identifikasi produk.** Sebutkan balik nama produk + linknya ke pengguna (konfirmasi match). Foto produk HARUS dari link persis yang pengguna kirim — jangan substitusi dari marketplace lain.
 1. **Ambil galeri foto seller.** Utamakan cara non-browser dulu (curl + og_info / curl-cffi untuk Tokopedia). Foto referensi = foto produk bersih PERTAMA yang benar-benar menggambarkan produk sesuai nama (bukan sekadar foto bersih pertama; untuk listing multi-desain, cocokkan motifnya; kalau tidak ada yang jelas cocok, tandai RAGU — jangan nebak). Lewati infografik/size chart.
-2. **Generate frame-0 untuk SEMUA produk hari itu (3 produk = 3 frame-0, sekaligus dalam satu batch gambar)** (generator gambar AI sendiri, BUKAN Flow). Canvas = foto jangkar (base) sesuai mode. Referensi = foto seller. Ganti HANYA bajunya — sisanya jangan di-redraw. Tulis bentuk dengan kata geometri + larangan eksplisit (lihat bagian 4).
+2. **Generate frame-0 untuk SEMUA produk hari itu (3 produk = 3 frame-0, sekaligus dalam satu batch gambar)** — DUA cara, pilih yang hemat dulu: **(b) di dalam Flow, GRATIS (bagian 4b, cara yang dianjurkan — 0 kuota Muse + 0 kredit Flow)**; kalau cara (b) gagal 2x dengan perbaikan spesifik, baru pakai (a) generator gambar AI sendiri (bagian 4). Canvas = foto jangkar (base) sesuai mode. Referensi = foto seller. Ganti HANYA bajunya — sisanya jangan di-redraw. Tulis bentuk dengan kata geometri + larangan eksplisit (lihat bagian 4).
 3. **Gate 1 — untuk SETIAP frame-0** — bandingkan frame-0 dengan foto seller, detail per detail. Produk harus **identik minimal 95%**: warna, motif (jumlah/posisi), kerah, lengan, kancing (jumlah/ukuran/posisi), resleting, hem, fit. Kalau ragu sudah 95% atau belum, video TIDAK dibuat. Kalau frame-0 gagal, perbaiki dengan **fresh re-edit** (bukan edit bedah pada frame-0 yang gagal — sudah terbukti edit bedah bisa mengembalikan foto seller itu sendiri). Kalau 2x fresh re-edit gagal, fallback = crop faceless foto asli seller.
 4. **Generate video di Flow — SEKALI buka, 3 video berurutan** (bagian 5). Frame-0 sebagai gambar awal (Frames-to-Video). Model Omni 1.1 Flash, 720p, 10 detik, x1. Prompt gerakan sesuai mode (bagian 6). **JANGAN buka Flow sebelum SEMUA frame-0 batch hari itu selesai + lolos Gate 1.**
 5. **Gate 3** — cek frame video di 0 / 0,6 / 2 / 3,5 / 6,5 / 9,5 detik + background freeze (0 vs 0,6) + ketajaman vs frame-0 + bentuk dada + faceless (bagian 7). Video yang mengubah detail produk di tengah jalan = GAGAL walau frame-0 lolos.
@@ -79,6 +81,29 @@ Rumus prompt frame-0:
 Aturan hitungan:
 - Kalau jumlah detail (kancing, pita, motif) diragukan, CROP + PERBESAR foto seller dulu sebelum menilai frame-0.
 - Kalau frame-0 kehilangan detail hitungan berulang kali, pakai frame-0 LAMA yang sudah benar sebagai referensi garmen (bukan flat-lay seller).
+
+## 4b. Frame-0 GRATIS di dalam Flow — cara hemat kuota (terbukti 18 Nov 2026)
+
+**Kenapa cara ini:** frame-0 yang dibuat di Flow (mode Image) = **0 kuota Muse + 0 kredit Flow**. Frame-0 dari generator gambar sendiri makan kuota Muse (batas 4 gambar/pesan). Kalau frame-0 Flow lolos Gate 1, tidak ada alasan memakai generator sendiri untuk frame-0. Video-nya tetap bayar seperti biasa (15 kredit/video di Flow, atau kuota Muse kalau pakai generator sendiri).
+
+**Langkah-langkah:**
+1. Buka flow.google.com (login akun Google sendiri). Di prompt bar, pindah dari mode Video ke mode **Image (Gambar)** — model **Nano Banana 2.1**, output **x1**, aspect ratio sesuai mode (duduk/berdiri vertikal/mirror = **9:16**, horizontal = **16:9**). Panel settings menunjukkan **"0 kredit"** per gambar — gratis, tidak memotong saldo video.
+2. Lampirkan 2 gambar sebagai ingredients (tombol "Tambahkan bahan"): **foto seller PERTAMA, foto jangkar/base KEDUA**. Urutan ini yang teruji — jangan dibalik.
+3. Prompt = **kalimat eksplisit** (bukan 2 kata). Template — ganti [DESKRIPSI PRODUK] dan [RUANGAN BASE] sesuai mode:
+   > "Transfer the outfit from the first image onto the woman in the second image. Keep the second image unchanged: same woman, same standing pose, same bedroom with warm cream wall and golden window light. Only her clothes change — she must wear the [DESKRIPSI PRODUK, contoh: sleeveless tan cotton-linen vest with ruffle trim along the shoulders and a gathered peplum waist with small side ties, plus dark brown wide-leg pants], exactly as in the first image."
+4. Generate 1 gambar, unduh. **Gate 1 TETAP WAJIB** (bagian 3 langkah 3) — frame-0 Flow dinilai sama kerasnya dengan frame-0 generator sendiri.
+
+**YANG TIDAK BEKERJA — jangan ulangi:**
+- **"/transferoutfit" BUKAN slash command.** Ketik "/" di kotak prompt Flow tidak memunculkan menu, chip, atau dropdown apa pun (dites 18 Nov 2026, 4x percobaan: "/" saja, "/transferoutfit" penuh, tambah spasi, ketik ulang huruf per huruf — semuanya tetap teks biasa).
+- **Prompt 2 kata "transfer outfit" saja GAGAL.** Model salah arah: baju TIDAK pindah (model tetap pakai cardigan pink asli base), yang pindah malah BACKGROUND-nya jadi jalanan/kafe dari foto seller. Bukti: b18_69 v1 (18 Nov 2026).
+- **Yang berhasil adalah kalimat eksplisit di atas** — menyebut arah transfer ("from the first image onto the woman in the second image") + "Keep the second image unchanged" + deskripsi outfit lengkap. Bukti: b18_69 v2 (18 Nov 2026) — frame-0 lolos Gate 1 ~96%.
+
+**Cacat yang diketahui (dicatat, bukan gagal produk):**
+- Tas dari foto seller bisa TIDAK ikut pindah — fallback tanpa tas, diterima (sama seperti aturan tas).
+- Framing bisa LEBIH DEKAT dari base (lengan tampak besar, bawahan cuma kelihatan sebagian di tepi bawah) — catat sebagai cacat framing; produknya sendiri tetap dinilai di Gate 1.
+- Kalau 2x gagal dengan perbaikan spesifik (prompt diperjelas, urutan ingredients dicek), BERHENTI dan kembali ke cara (a) generator sendiri — gambar Flow gratis tapi waktu tidak.
+
+**Bukti nyata — Nifira Vest Ruffle (b18_69, 18 Nov 2026):** vest ruffle TAN (sleeveless, kerah bulat, ruffle kedua bahu, peplum kerut + tali kecil kedua sisi pinggang, celana coklat tua wide-leg) dipindah ke base horizontal cahaya. v1 (prompt 2 kata) gagal — background ketukar jalanan. v2 (prompt kalimat eksplisit) lolos Gate 1 ~96% — semua detail produk cocok, background kamar cream + cahaya emas utuh, faceless (mulut/dagu saja). File: `~/workspace/fashion_test/batch18/b18_69/flow_transferoutfit_v2.jpg`.
 
 ---
 
@@ -197,8 +222,8 @@ Setelah Gate 3 lolos + post-process selesai:
 13. Saat upload/jadwalkan di TikTok Studio, label "AI-generated content" JANGAN dicentang — TikTok memberi labelnya sendiri setelah upload.
 14. Video "Cacat" JANGAN PERNAH dijadwalkan.
 15. Jangan pakai jumlah view di profil web TikTok sebagai bukti tayang — cek langsung di TikTok Studio (Posts).
-16. Jangan dorong spend kredit Flow kalau pengguna tidak minta. Flow = backup produk andalan; generator sendiri = utama.
-17. Dinding mode duduk TETAP maroon hangat. Jangan usulkan ganti background kecuali pengguna yang mulai.
+16. Rejim produksi (Jendral, 18 Nov 2026, opsi B, mulai 19 Nov 2026): total 13 video/hari = 10 generator sendiri + **3 Flow/hari** (cron tiap malam 20:30, ATURAN BATCH). Flow adalah produksi RUTIN, bukan cuma backup. **Frame-0 sebisa mungkin dibuat GRATIS di dalam Flow (bagian 4b) supaya hemat kuota Muse** — generator sendiri hanya dipakai kalau frame-0 Flow gagal 2x. Jangan beli kredit Flow.
+17. Dinding SEMUA base = **CREAM HANGAT** (keputusan Jendral 17 Nov 2026 — file `*_cahaya.jpg`). Jangan usulkan ganti background kecuali pengguna yang mulai.
 18. Satu produk = 1 frame-0 + 1 video per mode. Jangan generate video dari frame-0 yang belum lolos Gate 1.
 
 ## 12. Batas kerja
@@ -251,3 +276,4 @@ Pelajaran dari batch ini:
 - **LUT (b18_01)**: warna produk berubah (rompi abu jadi lebih muda) — DITOLAK pengguna, jangan pakai.
 - **Dinding terracotta (b17_57)**: frame-0 merender dinding oranye bukan maroon — cacat yang dicatat, produk tetap jalan.
 - **"Poin tidak cukup" (16 Nov)**: bukan kegagalan — generasi yang sudah jalan tetap selesai dan bisa diunduh.
+- **Prompt "transfer outfit" 2 kata di Flow Image (b18_69 v1, 18 Nov 2026)**: GAGAL — model menukar background, bukan outfit. Pakai kalimat eksplisit (bagian 4b). "/transferoutfit" juga bukan slash command — ketik "/" tidak memunculkan apa-apa.
