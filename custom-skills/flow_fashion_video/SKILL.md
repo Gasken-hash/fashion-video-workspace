@@ -105,6 +105,10 @@ Aturan hitungan:
 
 **Bukti nyata — Nifira Vest Ruffle (b18_69, 18 Nov 2026):** vest ruffle TAN (sleeveless, kerah bulat, ruffle kedua bahu, peplum kerut + tali kecil kedua sisi pinggang, celana coklat tua wide-leg) dipindah ke base horizontal cahaya. v1 (prompt 2 kata) gagal — background ketukar jalanan. v2 (prompt kalimat eksplisit) lolos Gate 1 ~96% — semua detail produk cocok, background kamar cream + cahaya emas utuh, faceless (mulut/dagu saja). File: `~/workspace/fashion_test/batch18/b18_69/flow_transferoutfit_v2.jpg`.
 
+**Bukti ke-2 — FADFAD Rompi Bunga 3D (b18_70, 18 Nov 2026, mode Berdiri Vertikal):** rompi HITAM dari foto **flat-lay** (bukan foto model) dipindah ke base vertikal cahaya. Lolos Gate 1 **~97% sekali jalan** — 6 bunga 3D tepat (3 kiri + 3 kanan, mutiara putih di tengah), pengait segitiga perak ada, bukaan diagonal, rok midi krem, background kamar utuh, faceless. Properti styling seller (tas mutiara, pin bunga, majalah, sepatu) tidak ikut pindah. File: `~/workspace/fashion_test/batch18/b18_70/flow_transferoutfit_v1.jpg`. **Kesimpulan: metode ini TERBUKTI UMUM — 2/2 produk, 2 mode, termasuk dari foto flat-lay.**
+
+**Perhatian — nama file di grid media Flow bisa menipu:** grid menyimpan file dari tes sebelumnya dengan nama yang sama (`seller.jpg`/`base.jpg`). Sebelum attach, SELALU cek preview tiap ingredient — pastikan itu foto produk + base yang benar untuk produk ini, bukan sisa tes lama.
+
 ---
 
 ## 5. Generate video di Flow — langkah demi langkah
