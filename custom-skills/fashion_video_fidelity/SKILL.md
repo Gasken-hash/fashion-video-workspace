@@ -250,9 +250,13 @@ marked PROPOSED, not locked.
   2026: all base walls unified to the horizontal base's warm cream)
   — Jendral cancelled the pale-pink wall change 13 Nov 11:03 WITA
   ("stop jelek kamu aneh bikinnya, stop ya").
-  **MODE DUDUK DI-PAUSE SEMENTARA (Jendral, 17 Nov 2026): atasan
-  rotasi HANYA Berdiri Vertikal ↔ Horizontal sampai Jendral bilang
-  lanjut.**
+  **MODE DUDUK DI-PAUSE SEMENTARA (Jendral, 17 Nov 2026)** sampai
+  Jendral bilang lanjut. **ROTASI MODE GLOBAL (Jendral, 20 Nov
+  2026):** produksi memilih produk dari sheet mengikuti giliran
+  mode — siklus Berdiri Vertikal → Horizontal → Mirror (counter
+  `rotasi_global.txt`); giliran Berdiri/Horizontal = atasan
+  berikutnya, giliran Mirror = setelan/dress berikutnya; full-body
+  tetap mirror saja.
 - **Photo source — HARD RULE (Jendral, 13 Nov 2026, 13:03 WITA):**
   product photos MUST come from the exact link Jendral sent.
   NEVER substitute a photo from another marketplace, even for

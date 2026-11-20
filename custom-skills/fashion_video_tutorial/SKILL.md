@@ -66,6 +66,12 @@ Link Cloudinary (unduh langsung, versi cahaya):
   sinar matahari sore hangat dari jendela kiri.
   Gerakan: Set Berdiri F (lihat bagian 5).
   Link Cloudinary: https://res.cloudinary.com/dpllb7idh/image/upload/v1794890103/lala_berdiri_vertikal_flow_base_cahaya.jpg
+  **REVISI 19 Nov 2026:** base ini sudah direvisi bentuk dadanya
+  jadi natural (sebelumnya rata) — file LOKAL di atas adalah versi
+  revisi yang dipakai produksi. Link Cloudinary masih versi LAMA
+  (rata), jangan dipakai. Base lain (horizontal, mirror, duduk)
+  masih versi rata; edit serupa untuk base lain DITOLAK generator
+  dan TIDAK PERNAH di-retry.
 
 ### 1c. Mode BERDIRI HORIZONTAL (atasan, variasi hari lain)
 - `~/workspace/fashion_test/bases/lala_berdiri_horizontal_base_v2_cahaya.jpg`
@@ -395,15 +401,19 @@ curl -X POST "https://api.cloudinary.com/v1_1/<cloud>/video/upload" \
 | 4. Mirror selfie | SETELAN (atasan + bawahan panjang) | Vertikal 9:16, full-body di dalam cermin | lala_berdiri_fullbody_mirror_base_cahaya.jpg | Prompt Jendral verbatim |
 
 Satu produk bisa dapat 1 video per mode, tayang di HARI BERBEDA.
-**ROTASI MODE (aturan Jendral 16 Nov 2026):** produksi merotasi mode
-ANTAR PRODUK — 1 duduk, 1 berdiri vertikal, 1 horizontal, diulang.
-JANGAN semua gaya di 1 produk. Setelan tetap mirror (tidak ikut
-rotasi). Mode yang sudah dipakai tiap produk dicatat di kolom Mode
-(Antrian Link) supaya kelihatan mana yang sudah pernah.
+**ROTASI MODE GLOBAL (aturan Jendral 20 Nov 2026):** produksi TIDAK
+lagi ambil baris antrean urut dari atas — produk dipilih dari sheet
+MENYESUAIKAN giliran mode. Siklus: **Berdiri Vertikal → Horizontal →
+Mirror → Berdiri Vertikal → ...** (counter `rotasi_global.txt`).
+Giliran Berdiri/Horizontal → atasan Pending berikutnya (termasuk
+label Duduk/Duduk (ribet)); giliran Mirror → setelan/dress Pending
+berikutnya. Mode kehabisan stok → maju ke mode berikutnya. JANGAN
+semua gaya di 1 produk. **Full-body (setelan/dress) TETAP MIRROR
+saja.** Mode yang sudah dipakai tiap produk dicatat di kolom Mode
+(Antrian Link).
 **MODE DUDUK DI-PAUSE SEMENTARA (Jendral, 17 Nov 2026 ~11:29 WITA):**
-video duduk berubah banyak, prioritaskan mode lain dulu — atasan
-rotasi HANYA Berdiri Vertikal ↔ Horizontal sampai Jendral bilang
-lanjut.
+video duduk berubah banyak, prioritaskan mode lain dulu — mode
+Duduk jangan dipakai sampai Jendral bilang lanjut.
 
 ### Mode 2 — Berdiri vertikal (Set Berdiri F)
 Urutan: tangan kanan di pinggang → kedua tangan ke kerah/pita →
@@ -599,25 +609,34 @@ tangan bebas, level dada — revisi Jendral 16 Nov 2026 ~14:25 WITA).
   Tulis rok EKSPLISIT di prompt (jangan cuma "rok putih").
 - **Set gerakan duduk (A–E):** lihat bagian 5. Set yang sama TIDAK
   BOLEH dipakai di dua video berurutan.
-- **Mode (ROTASI PRODUKSI, aturan Jendral 16 Nov 2026):** produksi
-  merotasi mode ANTAR PRODUK — 1 duduk, 1 berdiri vertikal,
-  1 horizontal, diulang. Satu produk satu mode per pass; JANGAN semua
-  gaya di 1 produk. Setelan tetap mirror (tidak ikut rotasi).
-  Mode yang sudah dipakai tiap produk dicatat di kolom Mode
-  (Antrian Link) — kalau produk dibuat video ke-2/ke-3 nanti, pilih
-  mode yang BELUM dipakai.
-- **Mode (ROTASI JADWAL):** lineup yang dijadwalkan ke TikTok juga
-  rotasi mode (duduk → berdiri vertikal → horizontal → ...). Karena
-  produksi sudah merotasi mengikuti urutan antrean, jadwal yang ambil
-  baris dari atas ke bawah otomatis ikut rotasi. Kalau ada video yang
-  tidak bisa dijadwalkan, jangan isi slotnya dengan video bermode sama
-  dengan video sebelumnya kalau masih ada mode lain.
+- **Mode (ROTASI PRODUKSI GLOBAL, aturan Jendral 20 Nov 2026):**
+  produksi memilih produk dari sheet mengikuti giliran mode —
+  siklus Berdiri Vertikal → Horizontal → Mirror (counter
+  `rotasi_global.txt`), bukan ambil baris urut dari atas. Giliran
+  Berdiri/Horizontal = atasan berikutnya; giliran Mirror =
+  setelan/dress berikutnya. Satu produk satu mode per pass; JANGAN
+  semua gaya di 1 produk. Full-body tetap mirror saja. Mode yang
+  sudah dipakai tiap produk dicatat di kolom Mode (Antrian Link) —
+  kalau produk dibuat video ke-2/ke-3 nanti, pilih mode yang BELUM
+  dipakai.
+- **Mode (ROTASI JADWAL, aturan Jendral 20 Nov 2026):** lineup yang
+  dijadwalkan ke TikTok dipilih dengan siklus mode Berdiri Vertikal
+  → Horizontal → Mirror (Duduk disisipkan kalau ada stok) supaya
+  grid profil bervariasi — bukan ambil baris urut dari atas. Kalau
+  ada video yang tidak bisa dijadwalkan (mis. belum di Showcase),
+  ambil berikutnya dengan mode yang sama; jangan isi slotnya dengan
+  video bermode sama dengan video sebelumnya kalau masih ada mode
+  lain.
+- **Jeda tayang (aturan Jendral 17 Nov 2026):** slot pertama 07:00,
+  jeda antar video DIACAK 45–60 menit (acak baru tiap hari, bulatkan
+  ke 5 menit terdekat), video terakhir paling lambat ~23:30 —
+  supaya akun tidak kelihatan seperti bot yang posting tiap jam pas.
 - **Pose akhir:** finger heart 🫰 atau peace sign ✌️, dirotasi.
 - **Musik TikTok (pas posting):** 5 teratas Favorites di TikTok
-  Studio. Cek ulang sebelum tiap penjadwalan — lagu baru yang disimpan
-  Jendral langsung ada di paling atas (saat tutorial ini ditulis, lagu
-  teratas: "suara asli - ncus syakilla" — salma; sebelumnya
-  "Tante Holic" — Velett Key).
+  Studio, dirotasi mulai dari yang paling atas. Cek ulang sebelum
+  tiap penjadwalan — Jendral sering mengupdate Favorites-nya, lagu
+  yang baru disimpan langsung ada di paling atas. (Nama lagu tidak
+  dicatat di sini supaya tidak basi.)
 - **Caption TikTok:** SEFEMINIM mungkin, sesuai produk (contoh:
   "cardigan lucu 👉👈"). Rumus: caption feminim + 1 hashtag nama
   produk + war keyword (mis. "cardigan rajut"). PENDEK, jangan

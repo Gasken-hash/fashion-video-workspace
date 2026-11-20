@@ -201,7 +201,7 @@ Setelah Gate 3 lolos + post-process selesai:
 
 ## 10. Rotasi
 
-- **Rotasi mode ANTAR PRODUK** (bukan 1 produk langsung semua gaya): produk A duduk, B berdiri vertikal, C horizontal, lalu balik duduk. Tiap produk 1 mode per pass. File counter: `rotasi_mode.txt` (isi = mode BERIKUTNYA yang dipakai). Urutan: Duduk → Berdiri Vertikal → Horizontal → Duduk. Setelan/dress TIDAK ikut counter (tetap mirror). **MODE DUDUK DI-PAUSE SEMENTARA (Jendral, 17 Nov 2026): atasan rotasi HANYA Berdiri Vertikal ↔ Horizontal sampai Jendral bilang lanjut.**
+- **ROTASI MODE GLOBAL (aturan Jendral 20 Nov 2026):** produksi TIDAK lagi ambil baris antrean urut dari atas — produk dipilih dari sheet MENYESUAIKAN giliran mode. Siklus: **Berdiri Vertikal → Horizontal → Mirror → Berdiri Vertikal → ...** File counter: `rotasi_global.txt` (isi = mode BERIKUTNYA). Giliran Berdiri/Horizontal → ambil atasan Pending berikutnya (termasuk atasan berlabel Duduk/Duduk (ribet) — Duduk sedang pause, jadi dikerjakan Berdiri/Horizontal); giliran Mirror → ambil setelan/dress Pending berikutnya. Mode kehabisan stok → maju ke mode berikutnya dalam siklus. Counter maju HANYA setelah video berhasil (skip = tidak maju). **Full-body (setelan/dress) TETAP MIRROR saja — jangan pakai mode lain untuk setelan/dress.** **MODE DUDUK DI-PAUSE SEMENTARA (Jendral, 17 Nov 2026)** sampai Jendral bilang lanjut.
 - **Rotasi setelan (dalam mode mirror)**: arah putar, tangan bebas, posisi peace — dirotasi tiap video, jangan dua berurutan sama.
 - **Rotasi prop lantai (duduk)**: tas → kacamata → tumbler → tas.
 - **Rotasi rok** (kalau foto seller cuma atasan): ruffle putih → plisket putih → A-line putih polos → denim → midi krem → kembali ke ruffle putih. Warna disesuaikan dengan atasan.
